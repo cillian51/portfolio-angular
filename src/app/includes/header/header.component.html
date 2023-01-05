@@ -1,0 +1,38 @@
+<div class="sidebar" [ngClass]="{ expanded: isExpanded }">
+  <div class="header">
+    <h1 class="title" *ngIf="isExpanded">Cillian ROSAY</h1>
+    <div class="toggle" (click)="handleSidebarToggle()">
+      <span class="chevron"></span>
+    </div>
+  </div>
+  <div class="content d-flex flex-column" *ngIf="isExpanded">
+    <div class="social-links mt-3 text-center">
+      <a href="https://github.com/cillian51" class="github"
+        ><i class="bi bi-github"></i
+      ></a>
+    </div>
+    <nav id="navbar" class="nav-menu navbar">
+      <ul>
+        <a href="#hero" class="nav-link scrollto active"
+          ><i class="bi bi-house"></i><span> Home</span></a
+        >
+        <a href="#about" class="nav-link"
+          ><i class="bi bi-person"></i> <span> About</span></a
+        >
+        <a href="#resume" class="nav-link scrollto"
+          ><i class="bi bi-file-earmark-person"></i> <span> Resume</span></a
+        >
+        <a href="#portfolio" class="nav-link scrollto"
+          ><i class="bi bi-journal-bookmark"></i> <span> Portfolio</span></a
+        >
+        <a href="#services" class="nav-link scrollto"
+          ><i class="bi bi-server"></i> <span> Services</span></a
+        >
+        <a href="#contact" class="nav-link scrollto"
+          ><i class="bi bi-envelope"></i> <span> Contact</span></a
+        >
+      </ul>
+    </nav>
+  </div>
+  <app-footer *ngIf="isExpanded"></app-footer>
+</div>
