@@ -29,7 +29,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#hero p span {
+#hero p #text {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
@@ -53,4 +53,13 @@
     line-height: 24px;
     margin-bottom: 30px;
   }
+}
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 2px;
+	height: 30px;
+	background-color: #ffffff;
+  margin-left: 5px;
+	animation: blink .75s step-end infinite;
 }

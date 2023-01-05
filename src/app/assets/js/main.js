@@ -16,13 +16,13 @@ var _PART_INDEX = 0;
 var _INTERVAL_VAL;
 
 // Element that holds the text
-var _ELEMENT = document.querySelector('#text');
+var _ELEMENT = document.querySelector('text');
 
 // Cursor element
-var _CURSOR = document.querySelector('#cursor');
+var _CURSOR = document.querySelector('cursor');
 
 // Implements typing effect
-function Type() {
+function typeScript() {
   // Get substring with 1 characater added
   var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
   _ELEMENT.innerHTML = text;
