@@ -15,15 +15,11 @@ export class IndexComponent implements OnInit {
     // Cursor element
     this._CURSOR = document.getElementById('cursor') as HTMLInputElement;
     // Start the typing effect on load
-    this._INTERVAL_VAL = setInterval(() => this.typeScript(),100);
+    this._INTERVAL_VAL = setInterval(() => this.typeScript(), 100);
   }
 
   // List of sentences
-  _CONTENT = [
-    'Developer',
-    'Junior',
-    'Designer',
-  ];
+  _CONTENT = ['Developer', 'Junior', 'Designer'];
 
   // Current sentence being processed
   _PART = 0;
@@ -37,20 +33,16 @@ export class IndexComponent implements OnInit {
   _ELEMENT;
   _CURSOR;
 
-  text = "";
+  text = '';
   // Implements typing effect
   typeScript() {
     // Get substring with 1 characater added
     this.text = this._CONTENT[this._PART].substring(0, this._PART_INDEX + 1);
-    console.log(this.text)
     this._ELEMENT.innerHTML = this.text;
-    console.log(this._ELEMENT)
     this._PART_INDEX++;
-    console.log(this._CONTENT[this._PART])
 
     // If full sentence has been displayed then start to delete the sentence after some time
     if (this.text === this._CONTENT[this._PART]) {
-      
       clearInterval(this._INTERVAL_VAL);
       setTimeout(() => {
         this._INTERVAL_VAL = setInterval(() => this.deleteScript(), 50);
