@@ -3,6 +3,6 @@
   [isExpanded]="sidebarExpanded"
   (toggleSidebar)="sidebarExpanded = !sidebarExpanded"
 ></app-header>
-<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+<div class="content" [ngClass]="{ sidebarExpanded: sidebarExpanded }">
   <app-index></app-index>
 </div>
