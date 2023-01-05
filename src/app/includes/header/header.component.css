@@ -27,7 +27,7 @@
   height: 100vh;
   transition: 0.3s;
   width: 60px;
-  background: #000000;
+  background: #040b14;
   color: #6d6e7e;
 }
 .sidebar.expanded {
@@ -56,7 +56,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background: #000000;
+  background: #040b14;
 }
 
 .sidebar .header .chevron {
