@@ -59,7 +59,7 @@ section {
 #hero p {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  font-size: 30px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -78,12 +78,11 @@ section {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 36px;
   }
-
-  #hero h2 {
-    font-size: 18px;
+  #hero p {
+    font-size: 23px;
     line-height: 24px;
     margin-bottom: 30px;
   }
