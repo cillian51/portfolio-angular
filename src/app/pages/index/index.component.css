@@ -153,21 +153,15 @@ section {
   color: #050d18;
 }
 
-.skills .progress .skill .val {
+.skills .progress .val {
   float: right;
   font-style: normal;
+  font-family: 'Poppins', sans-serif;
 }
 
 .skills .progress-bar-wrap {
   background: #dce8f8;
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #149ddd;
+  height: 18px;
 }
 
 /*--------------------------------------------------------------
