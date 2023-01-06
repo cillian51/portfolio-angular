@@ -36,6 +36,7 @@ export class IndexComponent implements OnInit {
   text = '';
   // Implements typing effect
   typeScript() {
+    this._CURSOR.style.animationPlayState = 'paused';
     // Get substring with 1 characater added
     this.text = this._CONTENT[this._PART].substring(0, this._PART_INDEX + 1);
     this._ELEMENT.innerHTML = this.text;
@@ -44,14 +45,16 @@ export class IndexComponent implements OnInit {
     // If full sentence has been displayed then start to delete the sentence after some time
     if (this.text === this._CONTENT[this._PART]) {
       clearInterval(this._INTERVAL_VAL);
+      this._CURSOR.style.animationPlayState = 'running';
       setTimeout(() => {
         this._INTERVAL_VAL = setInterval(() => this.deleteScript(), 50);
-      }, 1000);
+      }, 3000);
     }
   }
 
   // Implements deleting effect
   deleteScript() {
+    this._CURSOR.style.animationPlayState = 'paused';
     // Get substring with 1 characater deleted
     this.text = this._CONTENT[this._PART].substring(0, this._PART_INDEX - 1);
     this._ELEMENT.innerHTML = this.text;

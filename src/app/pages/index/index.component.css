@@ -92,9 +92,18 @@ section {
   vertical-align: middle;
   width: 2px;
   height: 30px;
-  background-color: #ffffff;
   margin-left: 5px;
   animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgb(255, 255, 255);
+  }
 }
 
 /*--------------------------------------------------------------
