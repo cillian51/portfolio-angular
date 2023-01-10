@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import AOS from "aos";
 
 @Component({
   selector: 'app-index',
@@ -9,6 +10,8 @@ export class IndexComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    AOS.init();
+
     // Element that holds the text
     this._ELEMENT = document.getElementById('text') as HTMLInputElement;
 
