@@ -1,9 +1,12 @@
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="mobile-nav-toggle d-xl-none" (click)="handleSidebarToggle()">
+  <span *ngIf="!isExpanded" class="bi bi-list"></span>
+  <span *ngIf="isExpanded" class="bi bi-x"></span>
+</i>
+
 <div class="sidebar" [ngClass]="{ expanded: isExpanded }">
   <div class="header">
     <h1 class="title" *ngIf="isExpanded">Cillian ROSAY</h1>
-    <div class="toggle" (click)="handleSidebarToggle()">
-      <span class="chevron"></span>
-    </div>
   </div>
   <div class="content d-flex flex-column" *ngIf="isExpanded">
     <div class="social-links mt-3 text-center">

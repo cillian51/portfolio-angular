@@ -1,5 +1,4 @@
 .content {
-  margin-left: 60px;
   transition: 0.3s;
 }
 .content.sidebarExpanded {
