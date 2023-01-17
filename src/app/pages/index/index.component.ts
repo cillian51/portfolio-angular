@@ -40,8 +40,7 @@ export class IndexComponent implements OnInit {
   // Implements typing effect
   typeScript() {
     this.cursor.style.animationPlayState = 'paused';
-    // Get substring with 1 characater added
-    this.text = this.content[this.part].substring(0, this.part_index + 1);
+    this.text = getSubstringWithACaracterAdded();
     this.element.innerHTML = this.text;
     this.part_index++;
 
@@ -53,6 +52,9 @@ export class IndexComponent implements OnInit {
         this.interval_val = setInterval(() => this.deleteScript(), 50);
       }, 3000);
     }
+  }
+  private getSubsctringWithACaracterAdded() {
+    this.content[this.part].substring(0, this.part_index + 1);
   }
 
   // Implements deleting effect
